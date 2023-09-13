@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+td{
+    border:1px solid black;
+    width: 150px;
+    height:150px;
+}
+.hover-effect:hover{
+    background-color:rgb(2, 255, 2);
+    opacity:.4;
+}
+.hover-effect-neg:hover{
+    background-color:rgb(255, 0, 0);
+    opacity:.6;
+}
+
