@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="randomizer()">
     
     <div class="nav-holder">    
         <div class="logo-item">
@@ -31,24 +31,24 @@
             <p class="speech" id="chat"></p>
         </div>
         
-        <button id="restart" onclick="randomizer()">Reset Game!</button>
+        <button id="restart" onclick="randomizer(); restart() ">Reset Game!</button>
         <div class="board-container">
             <div class="game" id="baord">
                 <table>
                     <tr>
-                        <td class=" hover-effect" id="cella" onclick="selectionA()" ></td>
-                        <td class=" hover-effect" id="cellb"></td>
-                        <td class="hover-effect" id="cellc"></td>
+                        <td class=" hover-effect" id="cella" onclick="selectionA(); winner()" ></td>
+                        <td class=" hover-effect" id="cellb" onclick="selectionB(); winner()"></td>
+                        <td class="hover-effect " id="cellc" onclick="selectionC(); winner()"></td>
                     </tr>
                     <tr>
-                        <td class="hover-effect" id="celld"></td>
-                        <td class="hover-effect" id="celle"></td>
-                        <td class="hover-effect" id="cellf"></td>
+                        <td class="hover-effect" id="celld" onclick="selectionD(); winner()"></td>
+                        <td class="hover-effect" id="celle" onclick="selectionE(); winner()"></td>
+                        <td class="hover-effect" id="cellf" onclick="selectionF(); winner()"></td>
                     </tr>
                     <tr>
-                        <td class="hover-effect" id="cellg"></td>
-                        <td class="hover-effect" id="cellh"></td>
-                        <td class="hover-effect" id="celli"></td>
+                        <td class="hover-effect" id="cellg" onclick="selectionG(); winner()"></td>
+                        <td class="hover-effect" id="cellh" onclick="selectionH(); winner()"></td>
+                        <td class="hover-effect" id="celli" onclick="selectionI(); winner()"></td>
                     </tr>
                 </table>
             </div>
