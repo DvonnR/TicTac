@@ -31,6 +31,7 @@ var H8 = document.getElementById("cellh").value;
 var I9 = document.getElementById("celli").value;
 
 
+
 var reset = document.querySelector("#restart");
 var player1 = false;
 var player2 = false;
@@ -57,8 +58,12 @@ function winner(){
     G.classList.add("disable");
     H.classList.add("disable");
     I.classList.add("disable");
-   
-    
+    if(A1 === "X" && B2 === "X" && C3 === "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( A1 === "O" && B2 === "O" && C3 === "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 
 }
 else if(D4 == "X" && E5 == "X" && F6 == "X" || D4 == "O" && E5 == "O" && F6 == "O"){
@@ -75,7 +80,12 @@ else if(D4 == "X" && E5 == "X" && F6 == "X" || D4 == "O" && E5 == "O" && F6 == "
     G.classList.add("disable");
     H.classList.add("disable");
     I.classList.add("disable");
-    
+    if(D4 == "X" && E5 == "X" && F6 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( D4 == "O" && E5 == "O" && F6 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(G7 == "X" && H8 == "X" && I9 == "X" || G7 == "O" && H8 == "O" && I9 == "O"){
     G.classList.remove("disable");
@@ -91,7 +101,12 @@ else if(G7 == "X" && H8 == "X" && I9 == "X" || G7 == "O" && H8 == "O" && I9 == "
     A.classList.add("disable");
     B.classList.add("disable");
     C.classList.add("disable");
-    
+    if(G7 == "X" && H8 == "X" && I9 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( G7 == "O" && H8 == "O" && I9 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(A1 == "X" && E5 == "X" && I9 == "X" || A1 == "O" && E5 == "O" && I9 == "O"){
     A.classList.remove("disable");
@@ -107,7 +122,12 @@ else if(A1 == "X" && E5 == "X" && I9 == "X" || A1 == "O" && E5 == "O" && I9 == "
     G.classList.add("disable");
     B.classList.add("disable");
     C.classList.add("disable");
-    
+    if(A1 == "X" && E5 == "X" && I9 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( A1 == "O" && E5 == "O" && I9 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(C3 == "X" && E5 == "X" && G7 == "X" || C3 == "O" && E5 == "O" && G7 == "O"){
     C.classList.remove("disable");
@@ -123,7 +143,12 @@ else if(C3 == "X" && E5 == "X" && G7 == "X" || C3 == "O" && E5 == "O" && G7 == "
     A.classList.add("disable");
     B.classList.add("disable");
     I.classList.add("disable");
-    
+    if(C3 == "X" && E5 == "X" && G7 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( C3 == "O" && E5 == "O" && G7 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(A1 == "X" && D4 == "X" && G7 == "X" || A1 == "O" && D4 == "O" && G7 == "O"){
     A.classList.remove("disable");
@@ -139,7 +164,12 @@ else if(A1 == "X" && D4 == "X" && G7 == "X" || A1 == "O" && D4 == "O" && G7 == "
     E.classList.add("disable");
     B.classList.add("disable");
     I.classList.add("disable");
-    
+    if(A1 == "X" && D4 == "X" && G7 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if( A1 == "O" && D4 == "O" && G7 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(B2 == "X" && E5 == "X" && H8 == "X" || B2 == "O" && E5 == "O" && H8 == "O"){
     B.classList.remove("disable");
@@ -155,7 +185,12 @@ else if(B2 == "X" && E5 == "X" && H8 == "X" || B2 == "O" && E5 == "O" && H8 == "
     A.classList.add("disable");
     G.classList.add("disable");
     I.classList.add("disable");
-    
+    if(B2 == "X" && E5 == "X" && H8 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if(B2 == "O" && E5 == "O" && H8 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
 }
 else if(C3 == "X" && F6 == "X" && I9 == "X" || C3 == "O" && F6 == "O" && I9 == "O"){
     C.classList.remove("disable");
@@ -171,11 +206,27 @@ else if(C3 == "X" && F6 == "X" && I9 == "X" || C3 == "O" && F6 == "O" && I9 == "
     E.classList.add("disable");
     B.classList.add("disable");
     G.classList.add("disable");
-    
+    if(C3 == "X" && F6 == "X" && I9 == "X"){
+        spk.innerText = "Player X has won the round. Please restart to play again.";
+    }
+    else if(C3 == "O" && F6 == "O" && I9 == "O"){
+        spk.innerText = "Player O has won the round. Please restart to play again.";
+    }
+}
+
+else if(A1 != "" && B2 != "" && C3 != "" 
+&& D4 != "" && E5 != "" && F6 != "" 
+&& G7 != "" && H8 != "" && I9!= ""){
+    spk.innerText = "Game has ended in a draw. Go ahead and restart."
 }
 
 else{
-    spk.innerText = "Next players move;"
+    if(player1 == true && player2 == false){
+        spk.innerText = "X has the next move."
+    }
+    else if(player1 == false && player2 == true){
+        spk.innerText = "O has the next move."
+    }
 }
 }
 
@@ -231,14 +282,14 @@ function randomizer(){
     if(random == 1){
         player1 = true;
         player2 = false;
-        spk.innerText = "Player 1 will have the first move!";
+        spk.innerText = "X will have the first move!";
        
         console.log("this is a " + player1);
     }
     else{
         player2 = true; 
         player1 = false;
-        spk.innerText = "Player 2 will have the first move!";
+        spk.innerText = "O will have the first move!";
         
         console.log("this is b " + player2);
     }
