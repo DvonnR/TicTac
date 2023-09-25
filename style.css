@@ -3,6 +3,7 @@
     padding:0;
     font-family: "poppins";
 }
+
 .nav-holder{
     
     text-align:center;
@@ -11,27 +12,36 @@
     border-bottom:solid 2px;
     
 }
+
 .xo{
     width:130px;
     float:left;
     margin: 35px 0 0 15px;
-}
-.nav-list{
-    margin:0 0 0 40vw;
-    display:inline-block;
-    padding-top:40px;
-}
-.nav-items{
-    list-style-type: none;
-  
-    display:inline;
-    padding:30px;
     
 }
+
+
+
+.nav-items{
+    list-style-type: none;
+    margin:0;
+    padding-top:40px;
+    overflow:hidden;    
+    float:right;
+}
+
 li{
-    display:inline;
-    font-size: 30px;
-    margin:30px;
+  float:left;
+  font-size:20px;
+}
+
+li a{
+    display:block;
+    text-align: center;
+  margin:14px 16px ;
+  
+  text-decoration: none;
+ 
 }
 .container{
     text-align:center;
@@ -39,29 +49,32 @@ li{
     width:500px;
     margin: 100px auto;
 }
+
 table{
     
     margin-top:20px;
     margin-bottom:20px;
     margin-left:20px;
 }
+
 tr{
-    
-   
+       
 }
+
 td{
     border:1px solid black;
-    
     width: 150px;
     height:150px;
     text-align:center;
     font-size:50px;
     font-weight:900;
 }
+
 .hover-effect:hover{
     background-color:rgb(2, 255, 2);
     opacity:.4;
 }
+
 .hover-effect-neg:hover{
     background-color:rgb(255, 0, 0);
     opacity:.6;
@@ -70,7 +83,9 @@ td{
 .disable{
     pointer-events:none;
 }
-
+li a:hover{
+    color:blue;
+}
 @keyframes bonkers {
     0% {background-color: rgb(2, 255, 2);}
     25% {background-color: rgb(47, 255, 238);}
@@ -78,6 +93,7 @@ td{
     75% {background-color: rgb(204, 2, 255);}
     100% {background-color: rgb(255, 2, 2);}
 }
+
 .winning{
     opacity: .6;
     animation-name: bonkers;
@@ -86,9 +102,21 @@ td{
 }
 
  /* PHONE VERSION */
- @media only screen and (min-width: 320px) {
+ @media only screen and (max-width: 550px) {
  
-    
+    .xo{
+       
+       display:none; 
+    }
+
+    .nav-items{
+        list-style-type: none;
+        margin:0;
+        padding-top:40px;
+        overflow:hidden;    
+        clear:right;
+    }
+
 
   }
 
@@ -103,18 +131,12 @@ td{
         width:110px;
         height:150px;
         margin:0;
-        clear:both;
+      
     }
     .nav-items{
-       padding:0;
-       width:50px;
-       height:110px;
-       clear:both;
+  
     }
    li{
-    margin:-10px 0 0 0;
-    font-size:25px;
-    display:block;
-    clear:both;
+ 
    }
   }
