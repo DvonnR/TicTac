@@ -1,0 +1,8 @@
+This is a generic titac toe game.
+Requires two players.
+First move will be decided at random and will be displayed on the paragraoh tag with the id of "chat";
+Each turn after wil also be displayed on  the same tag and will display the results of the game at the end of each round.
+
+To Do:
+**Create computer setting for single player mode.
+  --> computer moves will be chosen at random.
